@@ -46,8 +46,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Column: Hero Text Content */}
             <div className="lg:col-span-7 text-left space-y-6">
-              {/* Supporting Tagline / Hindi Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0A2450]/80 border border-[#2684FF]/30 text-xs font-semibold text-[#43D5FF] backdrop-blur-md shadow-sm">
+              {/* Supporting Tagline / Hindi Badge with Animated Glow */}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0A2450]/80 border border-[#43D5FF]/40 text-xs font-semibold text-[#43D5FF] backdrop-blur-md shadow-[0_0_15px_rgba(67,213,255,0.2)] animate-glow-pulse">
                 <span className="w-2 h-2 rounded-full bg-[#43D5FF] animate-ping" />
                 <span className="tracking-wide">Product Aapka. Sales Ki Tension Hamari.</span>
               </div>
@@ -79,20 +79,20 @@ export default function HomePage() {
               </div>
 
               {/* Three Supporting Capability Labels */}
-              <div className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-6 sm:gap-8">
-                <div className="flex items-center gap-2.5">
+              <div className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-4 sm:gap-6">
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0A2450]/50 border border-white/5 hover:border-[#2684FF]/40 transition-colors">
                   <div className="w-2 h-2 rounded-full bg-[#2684FF]" />
                   <span className="text-xs sm:text-sm font-semibold tracking-wide text-[#F2F6FC] uppercase">
                     B2B Sales
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0A2450]/50 border border-white/5 hover:border-[#43D5FF]/40 transition-colors">
                   <div className="w-2 h-2 rounded-full bg-[#43D5FF]" />
                   <span className="text-xs sm:text-sm font-semibold tracking-wide text-[#F2F6FC] uppercase">
                     Distribution
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0A2450]/50 border border-white/5 hover:border-[#1457E8]/40 transition-colors">
                   <div className="w-2 h-2 rounded-full bg-[#1457E8]" />
                   <span className="text-xs sm:text-sm font-semibold tracking-wide text-[#F2F6FC] uppercase">
                     Market Expansion
@@ -121,10 +121,10 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#06142B] via-transparent to-transparent opacity-80" />
                   </div>
 
-                  {/* Floating Glass Data Badge Top Right */}
-                  <div className="absolute top-4 right-4 bg-[#06142B]/85 backdrop-blur-md border border-[#43D5FF]/30 rounded-xl p-3 shadow-lg">
+                  {/* Floating Glass Data Badge Top Right with Float Animation */}
+                  <div className="absolute top-4 right-4 bg-[#06142B]/90 backdrop-blur-md border border-[#43D5FF]/40 rounded-xl p-3 shadow-xl animate-float-slow">
                     <div className="flex items-center gap-2 text-xs font-semibold text-white">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                       <span>Verified Bulk Buyer Network</span>
                     </div>
                   </div>
@@ -143,6 +143,26 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Quick Credibility Stats Strip */}
+          <div className="mt-14 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center">
+            <div className="p-4 rounded-2xl bg-[#0A2450]/40 border border-white/5 backdrop-blur-sm hover:border-[#2684FF]/30 transition-all hover:-translate-y-0.5">
+              <div className="text-2xl sm:text-3xl font-extrabold text-gradient-electric">9+</div>
+              <div className="text-xs text-[#8FA0C0] mt-1 font-medium">Core Industry Sectors</div>
+            </div>
+            <div className="p-4 rounded-2xl bg-[#0A2450]/40 border border-white/5 backdrop-blur-sm hover:border-[#43D5FF]/30 transition-all hover:-translate-y-0.5">
+              <div className="text-2xl sm:text-3xl font-extrabold text-gradient-electric">Pan-India</div>
+              <div className="text-xs text-[#8FA0C0] mt-1 font-medium">Distributor & Dealer Reach</div>
+            </div>
+            <div className="p-4 rounded-2xl bg-[#0A2450]/40 border border-white/5 backdrop-blur-sm hover:border-[#1457E8]/30 transition-all hover:-translate-y-0.5">
+              <div className="text-2xl sm:text-3xl font-extrabold text-gradient-electric">100%</div>
+              <div className="text-xs text-[#8FA0C0] mt-1 font-medium">Verified Commercial Buyers</div>
+            </div>
+            <div className="p-4 rounded-2xl bg-[#0A2450]/40 border border-white/5 backdrop-blur-sm hover:border-[#43D5FF]/30 transition-all hover:-translate-y-0.5">
+              <div className="text-2xl sm:text-3xl font-extrabold text-gradient-electric">Strict NDA</div>
+              <div className="text-xs text-[#8FA0C0] mt-1 font-medium">Product Margin Protection</div>
             </div>
           </div>
         </div>
@@ -178,8 +198,8 @@ export default function HomePage() {
           {/* Three Capabilities Cards with Minimalist Icons */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1: Find Buyers */}
-            <div className="bg-[#F2F6FC] hover:bg-white rounded-2xl p-8 border border-transparent hover:border-[#2684FF]/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
-              <div className="w-14 h-14 rounded-xl bg-[#1457E8]/10 text-[#1457E8] group-hover:bg-[#1457E8] group-hover:text-white transition-all flex items-center justify-center mb-6 shadow-sm">
+            <div className="bg-[#F2F6FC] hover:bg-white rounded-2xl p-8 border border-[#06142B]/5 hover:border-[#2684FF]/40 transition-all duration-300 hover:shadow-2xl hover:shadow-[#2684FF]/10 hover:-translate-y-2 group akash-card-interactive">
+              <div className="w-14 h-14 rounded-xl bg-[#1457E8]/10 text-[#1457E8] group-hover:bg-[#1457E8] group-hover:text-white group-hover:scale-110 transition-all duration-300 flex items-center justify-center mb-6 shadow-sm">
                 <Search className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold text-[#06142B] mb-3 group-hover:text-[#1457E8] transition-colors">
@@ -205,8 +225,8 @@ export default function HomePage() {
             </div>
 
             {/* Card 2: Build Channels */}
-            <div className="bg-[#F2F6FC] hover:bg-white rounded-2xl p-8 border border-transparent hover:border-[#2684FF]/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
-              <div className="w-14 h-14 rounded-xl bg-[#2684FF]/10 text-[#2684FF] group-hover:bg-[#2684FF] group-hover:text-white transition-all flex items-center justify-center mb-6 shadow-sm">
+            <div className="bg-[#F2F6FC] hover:bg-white rounded-2xl p-8 border border-[#06142B]/5 hover:border-[#2684FF]/40 transition-all duration-300 hover:shadow-2xl hover:shadow-[#2684FF]/10 hover:-translate-y-2 group akash-card-interactive">
+              <div className="w-14 h-14 rounded-xl bg-[#2684FF]/10 text-[#2684FF] group-hover:bg-[#2684FF] group-hover:text-white group-hover:scale-110 transition-all duration-300 flex items-center justify-center mb-6 shadow-sm">
                 <Network className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold text-[#06142B] mb-3 group-hover:text-[#2684FF] transition-colors">
@@ -232,8 +252,8 @@ export default function HomePage() {
             </div>
 
             {/* Card 3: Grow Markets */}
-            <div className="bg-[#F2F6FC] hover:bg-white rounded-2xl p-8 border border-transparent hover:border-[#2684FF]/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
-              <div className="w-14 h-14 rounded-xl bg-[#1457E8]/10 text-[#1457E8] group-hover:bg-[#1457E8] group-hover:text-white transition-all flex items-center justify-center mb-6 shadow-sm">
+            <div className="bg-[#F2F6FC] hover:bg-white rounded-2xl p-8 border border-[#06142B]/5 hover:border-[#2684FF]/40 transition-all duration-300 hover:shadow-2xl hover:shadow-[#2684FF]/10 hover:-translate-y-2 group akash-card-interactive">
+              <div className="w-14 h-14 rounded-xl bg-[#1457E8]/10 text-[#1457E8] group-hover:bg-[#1457E8] group-hover:text-white group-hover:scale-110 transition-all duration-300 flex items-center justify-center mb-6 shadow-sm">
                 <TrendingUp className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold text-[#06142B] mb-3 group-hover:text-[#1457E8] transition-colors">

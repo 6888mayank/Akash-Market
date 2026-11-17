@@ -22,8 +22,8 @@ export default function CtaSection({
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#43D5FF]/30 to-transparent" />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Subtle Pill Tag */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0A2450]/80 border border-[#43D5FF]/30 text-xs font-semibold tracking-wide text-[#43D5FF] mb-8 shadow-sm">
+        {/* Subtle Pill Tag with Glow */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0A2450]/80 border border-[#43D5FF]/40 text-xs font-semibold tracking-wide text-[#43D5FF] mb-8 shadow-sm animate-glow-pulse">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Product Aapka. Sales Ki Tension Hamari.</span>
         </div>

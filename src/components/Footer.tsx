@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "./Logo";
 import {
@@ -9,6 +11,7 @@ import {
   ExternalLink,
   PhoneCall,
   Clock,
+  ArrowUp,
 } from "lucide-react";
 
 export default function Footer() {
@@ -301,6 +304,14 @@ export default function Footer() {
             <Link href="/contact" className="hover:text-[#43D5FF] transition-colors">
               Support
             </Link>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0A2450] border border-[#2684FF]/30 text-xs font-medium text-[#43D5FF] hover:bg-[#1457E8]/20 transition-all hover:-translate-y-0.5 shadow-sm"
+              title="Back to top"
+            >
+              <span>Back to top</span>
+              <ArrowUp className="w-3.5 h-3.5" />
+            </button>
           </div>
         </div>
       </div>

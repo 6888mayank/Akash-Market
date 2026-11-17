@@ -93,7 +93,7 @@ body {
   background-size: 28px 28px;
 }
 
-/* Shimmer Glow Animation */
+/* Shimmer Glow & Keyframe Animations */
 @keyframes pulse-slow {
   0%, 100% {
     opacity: 0.4;
@@ -109,6 +109,71 @@ body {
   animation: pulse-slow 8s infinite ease-in-out;
 }
 
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-shimmer-sweep {
+  animation: shimmer-sweep 3.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(38, 132, 255, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(67, 213, 255, 0.55);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s infinite ease-in-out;
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 6s ease infinite;
+}
+
+/* Interactive Cards & Buttons */
+.akash-card-interactive {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.akash-card-interactive:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -15px rgba(38, 132, 255, 0.25);
+  border-color: rgba(67, 213, 255, 0.45);
+}
+
 /* Button & Card Micro-Interactions */
 .akash-btn-primary {
   background: linear-gradient(135deg, #1457E8 0%, #2684FF 100%);
@@ -120,14 +185,27 @@ body {
   align-items: center;
   gap: 0.6rem;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 20px -2px rgba(38, 132, 255, 0.35);
+  box-shadow: 0 4px 20px -2px rgba(38, 132, 255, 0.4);
   position: relative;
   overflow: hidden;
 }
 
+.akash-btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: translateX(-150%) skewX(-20deg);
+  animation: shimmer-sweep 4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
 .akash-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px -2px rgba(67, 213, 255, 0.5);
+  box-shadow: 0 8px 30px -2px rgba(67, 213, 255, 0.6);
   background: linear-gradient(135deg, #2684FF 0%, #43D5FF 100%);
 }
 
